@@ -56,6 +56,8 @@
   #script: ../files/check-nodejs-version.sh  {{ nvm_exe_path }}
   register: nodejs_info
 
+- name: debug
+  debug: nodejs_info
 - name: apply nvm.sh and set default version
   sudo: True
   shell: LC_ALL="en_US.UTF-8"  /tmp/install-nodejs.sh  {{ nvm_exe_path }}  {{ nodejs_version }}
