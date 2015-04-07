@@ -34,7 +34,7 @@ trap 'RETVAL=$?;  do_error_exit '  ERR
 
 
 # enable NVM
-source $NVM_EXE_PATH  > /dev/null 2>&1
+source $NVM_EXE_PATH  #> /dev/null 2>&1
 
 
 # query versions
